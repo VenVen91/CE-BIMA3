@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayam Merah - Tanaman Sayuran Hias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+      }
+
+      .card-glow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+                    0 0 0 1px rgba(255, 255, 255, 0.05);
+      }
+
+      .text-glow {
+        text-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+      }
+
+      .hover-scale {
+        transition: all 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.02);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen flex flex-col items-center px-4 py-6 relative overflow-x-hidden">
+
+    <!-- Background Decorative Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-pink-500 opacity-6 rounded-full blur-2xl"></div>
+      <div class="absolute bottom-20 right-10 w-24 h-24 bg-fuchsia-400 opacity-6 rounded-full blur-2xl"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10 max-w-sm w-full flex flex-col h-full">
+
+      <!-- Plant Image Container -->
+      <div class="relative mb-4 flex-shrink-0">
+        <div class="glass-card rounded-xl p-3 hover-scale">
+          <img 
+            src="bayammerah.png"
+            alt="Bayam Merah (Amaranthus tricolor)" 
+            class="w-full h-48 object-cover rounded-lg shadow-xl"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Plant Info Card -->
+      <div class="glass-card rounded-xl p-6 card-glow hover-scale flex-1 flex flex-col">
+        <!-- Plant Name -->
+        <h1 class="text-2xl font-bold text-white mb-2 text-center text-glow">
+          BAYAM MERAH
+        </h1>
+
+        <!-- Scientific Name -->
+        <p class="text-pink-300 text-center text-sm italic mb-3">
+          (Amaranthus tricolor)
+        </p>
+
+        <!-- Family -->
+        <div class="text-center mb-4">
+          <span class="inline-block px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-xs font-medium border border-pink-500/30">
+            Famili: Amaranthaceae
+          </span>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-300 text-xs leading-relaxed mb-4 flex-1">
+          <p class="mb-2">
+            <span class="text-pink-400 font-medium">Asal:</span> Amerika Tropik
+          </p>
+          <p class="mb-3">
+            Tanaman daun semusim yang populer sebagai sayuran dan tanaman hias. Dikenal juga dengan nama "Joseph's Coat" karena warna daunnya yang mencolok.
+          </p>
+          <p class="mb-3">
+            Daun dan batang mudanya dapat dimakan, sering digunakan sebagai pengganti bayam dalam masakan seperti tumis, sup, atau salad.
+          </p>
+          <p>
+            Daya tarik utamanya adalah warna daunnya yang dramatis: merah, ungu, dan merah muda — memperindah kebun sekaligus fungsional.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div class="text-pink-400 font-semibold text-base mb-1">🌈</div>
+            <div class="text-white font-medium text-xs">Daun Berwarna</div>
+          </div>
+          <div class="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div class="text-pink-400 font-semibold text-base mb-1">🥗</div>
+            <div class="text-white font-medium text-xs">Bisa Mentah</div>
+          </div>
+        </div>
+
+        <!-- Care Note -->
+        <div class="bg-pink-500/10 border border-pink-500/30 rounded-lg p-3 mb-4">
+          <p class="text-pink-300 text-xs font-medium mb-1">✅ Catatan Perawatan & Konsumsi:</p>
+          <p class="text-gray-300 text-xs mb-2">
+            <strong>Konsumsi:</strong> Aman dimakan. Tidak beracun untuk anjing dan kucing jika diberikan dalam jumlah kecil.
+          </p>
+          <p class="text-gray-300 text-xs">
+            <strong>Perawatan:</strong> Tumbuh cepat dan dapat dipanen berkala. Ambil daun-daun muda untuk hasil terbaik.
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-xs font-light mt-4 flex-shrink-0">
+          <div class="flex justify-center items-center gap-1">
+            <span>© 2025</span>
+            <span class="text-pink-400 font-medium">BIMA CE UB</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

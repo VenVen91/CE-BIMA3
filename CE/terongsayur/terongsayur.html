@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terong Sayur - Tanaman Sayuran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+      }
+      
+      .card-glow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+                    0 0 0 1px rgba(255, 255, 255, 0.05);
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+      }
+      
+      .hover-scale {
+        transition: all 0.3s ease;
+      }
+      
+      .hover-scale:hover {
+        transform: scale(1.02);
+      }
+      
+      .eggplant-pattern::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, rgba(147, 51, 234, 0.12) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: pulse 4s ease-in-out infinite;
+      }
+      
+      .eggplant-pattern::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: pulse 4s ease-in-out infinite 2s;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen flex flex-col items-center px-4 py-6 relative overflow-x-hidden">
+    
+    <!-- Background Decorative Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-purple-600 opacity-6 rounded-full blur-2xl"></div>
+      <div class="absolute bottom-20 right-10 w-24 h-24 bg-violet-500 opacity-6 rounded-full blur-2xl"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10 max-w-sm w-full flex flex-col h-full">
+      
+      <!-- Plant Image Container -->
+      <div class="relative mb-4 flex-shrink-0">
+        <div class="glass-card rounded-xl p-3 hover-scale">
+          <img 
+            src="terongsayur.png"
+            alt="Terong Sayur (Solanum melongena)" 
+            class="w-full h-48 object-cover rounded-lg shadow-xl"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Plant Info Card -->
+      <div class="glass-card rounded-xl p-6 card-glow hover-scale flex-1 flex flex-col">
+        <!-- Plant Name -->
+        <h1 class="text-2xl font-bold text-white mb-2 text-center text-glow">
+          TERONG SAYUR
+        </h1>
+        
+        <!-- Scientific Name -->
+        <p class="text-purple-300 text-center text-sm italic mb-3">
+          (Solanum melongena)
+        </p>
+        
+        <!-- Family -->
+        <div class="text-center mb-4">
+          <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium border border-purple-500/30">
+            Famili: Solanaceae
+          </span>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-300 text-xs leading-relaxed mb-4 flex-1">
+          <p class="mb-2">
+            <span class="text-purple-400 font-medium">Asal:</span> India dan Sri Lanka
+          </p>
+          <p class="mb-3">
+            Tanaman perdu penghasil buah yang populer dijadikan sayur-sayuran di seluruh dunia. Terong dikenal dengan batangnya yang tegak dan sedikit berkayu, serta daunnya yang besar dan lebar, seringkali dengan permukaan berbulu halus.
+          </p>
+          <p class="mb-3">
+            Buahnya memiliki bentuk, ukuran, dan warna yang sangat beragam, mulai dari ungu, hijau, hingga putih, yang membuatnya menjadi bahan masakan serbaguna. Tanaman ini biasa dibudidayakan di kebun atau lahan pertanian untuk diambil buahnya yang lezat saat dimasak.
+          </p>
+          <p>
+            Daya tarik utamanya terletak pada buahnya yang berdaging tebal dan mampu menyerap bumbu dengan baik, menjadikannya favorit dalam berbagai hidangan seperti kari, tumisan, atau dibakar.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div class="text-purple-400 font-semibold text-base mb-1">🍆</div>
+            <div class="text-white font-medium text-xs">Buah Beragam</div>
+          </div>
+          <div class="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div class="text-purple-400 font-semibold text-base mb-1">🥘</div>
+            <div class="text-white font-medium text-xs">Serbaguna</div>
+          </div>
+        </div>
+
+        <!-- Care Note -->
+        <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3 mb-4">
+          <p class="text-yellow-300 text-xs font-medium mb-1">⚠️ Catatan Budidaya & Konsumsi:</p>
+          <p class="text-gray-300 text-xs mb-2">
+            <strong>Konsumsi:</strong> Buah aman dan lezat untuk dikonsumsi sebagai sayuran; namun, daun dan bunganya tidak untuk dimakan karena mengandung solanin yang bisa berbahaya jika tertelan.
+          </p>
+          <p class="text-gray-300 text-xs">
+            <strong>Budidaya:</strong> Membutuhkan sinar matahari penuh dan suhu hangat untuk tumbuh subur dan menghasilkan buah yang optimal.
+          </p>
+        </div>
+
+      <!-- Footer -->
+      <footer class="text-center text-gray-500 text-xs font-light mt-4 flex-shrink-0">
+        <div class="flex justify-center items-center gap-1">
+          <span>© 2025</span>
+          <span class="text-purple-400 font-medium">BIMA CE UB</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
